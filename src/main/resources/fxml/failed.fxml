@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import nz.ac.auckland.se206.custom.GameMaster?>
+<?import nz.ac.auckland.se206.custom.Settings?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.FailedController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="960.0">
+         <image>
+            <Image url="@../images/fail.png" />
+         </image>
+      </ImageView>
+      <Button id="buttonEnterGame" fx:id="buttonRestartGame" layoutX="186.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#restart" stylesheets="@../css/application.css" text="RESTART" />
+      <Button id="buttonEnterGame" fx:id="buttonQuitGame" alignment="TOP_CENTER" contentDisplay="RIGHT" layoutX="581.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="82.0" prefWidth="220.0" stylesheets="@../css/application.css" text="QUIT" />
+      <GameMaster fx:id="gameMaster" layoutX="760.0" layoutY="52.0" />
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../images/general/setting_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="settingRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#openSettingWindow" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Settings fx:id="settings" />
+   </children>
+</Pane>

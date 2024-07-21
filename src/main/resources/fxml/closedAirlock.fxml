@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import nz.ac.auckland.se206.custom.GameMaster?>
+<?import nz.ac.auckland.se206.custom.Settings?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ClosedAirlockController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="960.0">
+         <image>
+            <Image url="@../images/airlock_closed.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="controlConsole" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="193.0" layoutX="237.0" layoutY="306.0" onMouseClicked="#clickControlConsole" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <Rectangle id="selectable" fx:id="door" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="255.0" layoutX="454.0" layoutY="208.0" onMouseClicked="#clickDoor" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="153.0" fitWidth="163.0" layoutX="44.0" layoutY="352.0" rotate="45.0">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="subtitle" disable="true" fill="WHITE" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="960.0">
+         <font>
+            <Font name="Monospace 821 Bold BT" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#d1c8c8" layoutX="14.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTROL ROOM" textAlignment="CENTER" wrappingWidth="223.44574285494895">
+         <font>
+            <Font name="Monospaced Bold" size="17.0" />
+         </font>
+      </Text>
+      <GameMaster layoutX="800.0" layoutY="35.0" />
+      <Rectangle id="selectable" fx:id="arrow" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="41.0" layoutY="374.0" onMouseClicked="#goControlRoom" stroke="BLACK" strokeType="INSIDE" width="168.0" />
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../images/general/setting_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="settingRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#openSettingWindow" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <ImageView fx:id="fixMe" fitHeight="100.0" fitWidth="90.0" layoutX="740.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fix_me.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="controlScreen" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" layoutX="709.0" layoutY="225.0" onMouseClicked="#clickControlScreen" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+      <Settings fx:id="settings" />
+      <Pane fx:id="consolePane" layoutX="141.0" layoutY="55.0" prefHeight="491.0" prefWidth="707.0">
+         <children>
+            <ImageView fitHeight="461.0" fitWidth="507.0" layoutX="83.0" layoutY="15.0">
+               <image>
+                  <Image url="@../images/ControlLock.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="firstDigit" alignment="CENTER" layoutX="151.0" layoutY="252.0" prefHeight="102.0" prefWidth="79.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+
+               <font>
+                  <Font name="Monospaced Bold" size="40.0" />
+               </font></TextField>
+            <TextField fx:id="secondDigit" alignment="CENTER" layoutX="248.0" layoutY="254.0" prefHeight="102.0" prefWidth="79.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+               <font>
+                  <Font name="Monospaced Bold" size="40.0" />
+               </font></TextField>
+            <TextField fx:id="thirdDigit" alignment="CENTER" layoutX="346.0" layoutY="254.0" prefHeight="102.0" prefWidth="79.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+               <font>
+                  <Font name="Monospaced Bold" size="40.0" />
+               </font></TextField>
+            <TextField fx:id="fourthDigit" alignment="CENTER" layoutX="445.0" layoutY="254.0" prefHeight="102.0" prefWidth="79.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+               <font>
+                  <Font name="Monospaced Bold" size="40.0" />
+               </font></TextField>
+
+            <Text disable="true" fill="#d9d8d8" layoutX="144.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLOSE">
+               <font>
+                  <Font name="Monospaced Bold" size="39.0" />
+               </font>
+            </Text>
+            <Text disable="true" fill="#d9d8d8" layoutX="371.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUBMIT">
+               <font>
+                  <Font name="Monospaced Bold" size="39.0" />
+               </font>
+            </Text>
+            <Rectangle id="selectable" fx:id="closeButton" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="66.0" layoutX="120.0" layoutY="384.0" onMouseClicked="#clickCloseButton" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="168.0" />
+            <Rectangle id="selectable" fx:id="submitButton" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="63.0" layoutX="356.0" layoutY="386.0" onMouseClicked="#clickSubmitButton" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="170.0" />
+            <Label fx:id="titleText" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="52.0" prefHeight="78.0" prefWidth="468.0" text="THE AIRLOCK IS LOCKED" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongCodeMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="43.0" prefHeight="175.0" prefWidth="468.0" style="-fx-text-fill: #8B0000;" text="WRONG CODE!!" textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Bold" size="57.0" />
+               </font>
+            </Label>
+            <Label fx:id="text" alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="91.0" prefHeight="124.0" prefWidth="433.0" text="Enter the code to open the airlock." textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Monospaced Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="124.0" prefWidth="126.0" type="Pane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="118.0" fitWidth="120.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster/game_master.png" />
+         </image>
+      </ImageView>
+      <Label id="labelGameMaster" fx:id="label" text="Label" />
+      <Rectangle id="selectable" fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="124.0" onMouseClicked="#onClickGameMaster" stroke="BLACK" strokeType="INSIDE" width="126.0" />
+   </children>
+</fx:root>

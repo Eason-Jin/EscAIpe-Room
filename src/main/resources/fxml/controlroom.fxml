@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import nz.ac.auckland.se206.custom.GameMaster?>
+<?import nz.ac.auckland.se206.custom.Settings?>
+
+<Pane fx:id="room" focusTraversable="true" prefHeight="540.0" prefWidth="960.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ControlRoomController">
+   <children>
+      <ImageView fx:id="imageViewPowerOff" fitHeight="540.0" fitWidth="960.0">
+         <image>
+            <Image url="@../images/controlroom/power_off.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart1" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart2" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart3" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_3.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart4" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_4.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart5" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart6" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart7" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewStart8" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_start_8.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewPowerOn" fitHeight="540.0" fitWidth="960.0" visible="false">
+         <image>
+            <Image url="@../images/controlroom/power_on.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectangleDark" arcHeight="5.0" arcWidth="5.0" height="540.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" width="960.0" />
+      <ImageView fx:id="arrow" fitHeight="64.0" fitWidth="93.0" layoutX="415.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/arrow_2.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rectanglePowerVisible" arcHeight="5.0" arcWidth="5.0" fill="#e63855" height="13.0" layoutX="508.0" layoutY="364.0" stroke="TRANSPARENT" strokeType="INSIDE" width="9.0" />
+      <Rectangle id="selectable" fx:id="rectanglePowerButton" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="23.0" layoutX="502.0" layoutY="359.0" onMouseClicked="#onPowerOnButtonClicked" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <ImageView fx:id="imageViewHard" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewMedium" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageView6Minutes" fitHeight="150.0" fitWidth="200.0" layoutX="788.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <ImageView fx:id="imageView4Minutes" fitHeight="150.0" fitWidth="200.0" layoutX="788.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="788.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/controlroom/sign.png" />
+         </image>
+         <rotationAxis>
+            <Point3D y="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <Label fx:id="labelToBedroom" layoutX="33.0" layoutY="128.0" prefHeight="64.0" prefWidth="120.0" text="BEDROOM" textAlignment="CENTER" textFill="#00aaff" visible="false" wrapText="true">
+         <font>
+            <Font name="Monospaced Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelToAirlock" layoutX="811.0" layoutY="128.0" prefHeight="64.0" prefWidth="120.0" text="AIRLOCK" textAlignment="CENTER" textFill="#00aaff" visible="false" wrapText="true">
+         <font>
+            <Font name="Monospaced Bold" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle id="selectable" fx:id="rectangleToBedroom" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="112.0" layoutX="6.0" layoutY="111.0" onMouseClicked="#onToBedroomButtonClicked" stroke="BLACK" strokeType="INSIDE" visible="false" width="174.0" />
+      <Rectangle id="selectable" fx:id="rectangleToAirlock" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="112.0" layoutX="781.0" layoutY="111.0" onMouseClicked="#onToAirlockButtonClicked" stroke="BLACK" strokeType="INSIDE" visible="false" width="174.0" />
+      <Label id="labelInGameText" fx:id="labelText" alignment="TOP_LEFT" layoutX="198.0" layoutY="59.0" prefHeight="101.0" prefWidth="492.0" text="Label" wrapText="true" />
+      <ImageView fx:id="imageViewGameMaster" fitHeight="128.0" fitWidth="120.0" layoutX="652.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gamemaster/game_master_off.png" />
+         </image>
+         <effect>
+            <DropShadow height="255.0" radius="127.0" width="255.0">
+               <color>
+                  <Color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" opacity="0.4990439713001251" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <RadioButton id="radioButtonDifficulty" fx:id="radioButtonEasy" focusTraversable="false" layoutX="31.0" layoutY="148.0" mnemonicParsing="false" onAction="#onUpdateDifficulty" selected="true" text="EASY">
+         <toggleGroup>
+            <ToggleGroup fx:id="difficulty" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="radioButtonDifficulty" fx:id="radioButtonMedium" focusTraversable="false" layoutX="31.0" layoutY="258.0" mnemonicParsing="false" onAction="#onUpdateDifficulty" text="MEDIUM" toggleGroup="$difficulty" />
+      <RadioButton id="radioButtonDifficulty" fx:id="radioButtonHard" focusTraversable="false" layoutX="31.0" layoutY="368.0" mnemonicParsing="false" onAction="#onUpdateDifficulty" text="HARD" toggleGroup="$difficulty" />
+      <RadioButton id="radioButtonTimeLimit" fx:id="radioButton2Minutes" focusTraversable="false" layoutX="810.0" layoutY="148.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onUpdateTimeLimit" selected="true" text="2 MINUTES">
+         <toggleGroup>
+            <ToggleGroup fx:id="timeLimit" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton id="radioButtonTimeLimit" fx:id="radioButton4Minutes" focusTraversable="false" layoutX="810.0" layoutY="258.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onUpdateTimeLimit" text="4 MINUTES" toggleGroup="$timeLimit" />
+      <RadioButton id="radioButtonTimeLimit" fx:id="radioButton6Minutes" focusTraversable="false" layoutX="810.0" layoutY="368.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" onAction="#onUpdateTimeLimit" text="6 MINUTES" toggleGroup="$timeLimit" />
+      <Rectangle id="selectable" fx:id="rectangleGameMaster" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="140.0" layoutX="633.0" layoutY="4.0" onMouseClicked="#onToChatClicked" stroke="BLACK" strokeType="INSIDE" visible="false" width="160.0" />
+      <GameMaster fx:id="gameMaster" layoutX="646.0" layoutY="11.0" visible="false" />
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../images/general/setting_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="settingRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#openSettingWindow" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <ImageView fx:id="cdPlayer" fitHeight="28.0" fitWidth="59.0" layoutX="444.0" layoutY="472.0" onMouseClicked="#onClickCdPlayer" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/general/CD_player.png" />
+         </image>
+      </ImageView>
+      <Settings fx:id="settings" />
+   </children>
+</Pane>

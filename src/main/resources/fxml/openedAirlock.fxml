@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import nz.ac.auckland.se206.custom.GameMaster?>
+<?import nz.ac.auckland.se206.custom.Settings?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.OpenedAirlockController">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="960.0">
+         <image>
+            <Image url="@../images/airlock_open.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="shuttle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="255.0" layoutX="455.0" layoutY="208.0" onMouseClicked="#clickShuttle" stroke="BLACK" strokeType="INSIDE" visible="false" width="200.0" />
+      <ImageView fitHeight="153.0" fitWidth="163.0" layoutX="52.0" layoutY="352.0" rotate="45.0">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <Text fill="#d1c8c8" layoutX="22.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTROL ROOM" textAlignment="CENTER" wrappingWidth="223.44574285494895">
+         <font>
+            <Font name="Monospaced Bold" size="17.0" />
+         </font>
+      </Text>
+      <GameMaster layoutX="800.0" layoutY="35.0" />
+      <Rectangle id="selectable" fx:id="arrow" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" layoutX="50.0" layoutY="373.0" onMouseClicked="#goControlRoom" stroke="BLACK" strokeType="INSIDE" visible="false" width="168.0" />
+      <Rectangle id="selectable" fx:id="controlConsole" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="193.0" layoutX="236.0" layoutY="298.0" onMouseClicked="#clickControlConsole" stroke="BLACK" strokeType="INSIDE" visible="false" width="168.0" />
+      <Text fx:id="subtitle" disable="true" fill="WHITE" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="960.0">
+         <font>
+            <Font name="Monospace 821 Bold BT" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../images/general/setting_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="settingRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#openSettingWindow" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Settings fx:id="settings" />
+      <Rectangle id="selectable" fx:id="controlScreen" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="100.0" layoutX="709.0" layoutY="225.0" onMouseClicked="#clickControlScreen" stroke="BLACK" strokeType="INSIDE" visible="false" width="140.0" />
+      <ImageView fx:id="imageViewDoorLeft" fitHeight="227.0" fitWidth="98.0" layoutX="470.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/airlock/door_left.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewDoorRight" fitHeight="225.0" fitWidth="98.0" layoutX="542.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/airlock/door_right.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewHiddenLeft" fitHeight="226.0" fitWidth="116.0" layoutX="369.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/airlock/hidden_left.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewHiddenRight" fitHeight="227.0" fitWidth="112.0" layoutX="624.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/airlock/hidden_right.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

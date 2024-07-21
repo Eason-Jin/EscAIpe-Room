@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<?import nz.ac.auckland.se206.custom.GameMaster?>
+<?import nz.ac.auckland.se206.custom.Settings?>
+
+<Pane fx:id="room" focusTraversable="true" onKeyPressed="#onKeyPressed" onKeyReleased="#onKeyReleased" prefHeight="540.0" prefWidth="960.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.BedroomController">
+   <children>
+      <ImageView disable="true" fitHeight="540.0" fitWidth="960.0">
+         <image>
+            <Image url="@../images/bedroom/bedroom.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="paperPane" onMouseClicked="#clickPaperPane" prefHeight="540.0" prefWidth="960.0">
+         <children>
+            <ImageView fx:id="paper" fitHeight="148.0" fitWidth="267.0" layoutX="346.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/bedroom/paper.png" />
+               </image>
+            </ImageView>
+            <TextFlow layoutX="346.0" layoutY="214.0" prefHeight="110.0" prefWidth="267.0" textAlignment="CENTER">
+               <children>
+                  <Text fx:id="number" strokeType="OUTSIDE" strokeWidth="0.0" text="0000">
+                     <font>
+                        <Font name="Courier New Bold Italic" size="96.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </AnchorPane>
+      <Rectangle id="selectable" fx:id="exit" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="373.0" layoutX="702.0" layoutY="124.0" onMouseClicked="#clickExit" stroke="BLACK" strokeType="INSIDE" width="182.0" />
+      <Rectangle id="selectable" fx:id="blanket" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0" layoutX="163.0" layoutY="351.0" onMouseClicked="#clickBlanket" stroke="BLACK" strokeType="INSIDE" width="128.0" />
+      <Text fill="#00c0ff" layoutX="711.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CTRL ROOM" textAlignment="CENTER" wrappingWidth="160.99999999999994">
+         <font>
+            <Font name="Monospaced Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="97.0" fitWidth="178.0" layoutX="14.0" layoutY="429.0" onMouseClicked="#clickBox" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bedroom/box.png" />
+         </image>
+      </ImageView>
+      <Circle id="selectable" fx:id="chair" fill="DODGERBLUE" layoutX="463.0" layoutY="407.0" onMouseClicked="#clickChair" radius="74.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextFlow layoutX="766.0" layoutY="23.0" prefHeight="46.0" prefWidth="170.0" textAlignment="CENTER" />
+      <GameMaster layoutX="500.0" layoutY="30.0" />
+      <Rectangle id="selectable" fx:id="box" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="109.0" layoutX="10.0" layoutY="423.0" onMouseClicked="#clickBox" stroke="BLACK" strokeType="INSIDE" width="188.0" />
+      <ImageView fitHeight="79.0" fitWidth="110.0" layoutX="175.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bedroom/draw.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="110.0" layoutX="294.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bedroom/draw.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="drawer" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="94.0" layoutX="165.0" layoutY="94.0" onMouseClicked="#clickDrawer" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+      <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="630.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bedroom/mug.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="mug" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="52.0" layoutX="622.0" layoutY="318.0" onMouseClicked="#clickMug" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+      <ImageView fitHeight="173.0" fitWidth="128.0" layoutX="850.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bedroom/pile.png" />
+         </image>
+      </ImageView>
+      <TextFlow layoutY="495.0" prefHeight="37.0" prefWidth="960.0" textAlignment="CENTER">
+         <children>
+            <Text fx:id="subtitle" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="5.0" layoutY="5.0">
+         <image>
+            <Image url="@../images/general/setting_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle id="selectable" fx:id="settingRectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="5.0" layoutY="5.0" onMouseClicked="#openSettingWindow" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Settings fx:id="settings" />
+   </children>
+</Pane>
